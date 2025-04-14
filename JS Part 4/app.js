@@ -78,7 +78,7 @@ while (i <= 5) {
   i++;
 }
 
-//Favorite Movie 
+//Favorite Movie
 console.log("Favourite Movie : ");
 
 // const favMovie = "avator";
@@ -92,49 +92,51 @@ console.log("Favourite Movie : ");
 //       console.log("You quit the game");
 // }
 
-
 //Break Keyword
 console.log("Break Keyword");
-let a=1;
-while(a<=5){
-      if(a==3){
-            break; //break at 3
-      }
-      console.log(a);
-      a++;
+let a = 1;
+while (a <= 5) {
+  if (a == 3) {
+    break; //break at 3
+  }
+  console.log(a);
+  a++;
 }
 
 //Loop with Arrays
 console.log("Loop with Arrays : ");
 let fruits = ["mango", "apple", "banana", "litchi", "orange"];
 
-for(let i=0; i<fruits.length; i++){
-      console.log(i, fruits[i]);
+for (let i = 0; i < fruits.length; i++) {
+  console.log(i, fruits[i]);
 }
 
 //Nested loop with nested Array
 console.log("Nested loop with nested Array");
-let heroes = [["ironman", "spiderman", "thor"], ["superman", "wonder women", "flash"]];
-for(let i=0; i<heroes.length; i++){
-      console.log(`List #${i}`);
-      for(let j=0; j<heroes[i].length; j++){
-            console.log(heroes[i][j]);
-      }
+let heroes = [
+  ["ironman", "spiderman", "thor"],
+  ["superman", "wonder women", "flash"],
+];
+for (let i = 0; i < heroes.length; i++) {
+  console.log(`List #${i}`);
+  for (let j = 0; j < heroes[i].length; j++) {
+    console.log(heroes[i][j]);
+  }
 }
 
 //for of loop
 console.log("for of loop");
-for(fruit of fruits){
-      console.log(fruit);
+for (fruit of fruits) {
+  console.log(fruit);
 }
 
 //Nested for of loop
 console.log("Nested for of loop");
 
-for(list of heroes){
-      for(hero of list){
-            console.log(hero);
-      }
+for (list of heroes) {
+  for (hero of list) {
+    console.log(hero);
+  }
 }
 
 // To Do App (Only Js)
@@ -144,28 +146,28 @@ console.log("To Do App : ");
 let todo = [];
 let request = prompt("Please enter your request");
 
-while(true){
-      if(request == "quit"){
-            console.log("quitting app");
-            break;
-      }
+while (true) {
+  if (request == "quit") {
+    console.log("quitting app");
+    break;
+  }
 
-      if(request == "list"){
-            console.log("----------------");
-            for(let i=0; i<todo.length; i++){
-                  console.log(i, todo[i]);
-            }
-            console.log("----------------");
-      } else if(request == "add"){
-            let task = prompt("Please enter the task you wan to add.");
-            todo.push(task);
-            console.log("Task added....!");
-      } else if(request == "delete"){
-            let idx = prompt("Please Enter the task Index");
-            todo.splice(idx, 1);
-            console.log("Task Deleted.....!")
-      } else{
-            console.log("Wrong Request..!");
-      }
-      request = prompt("Please enter your request");
+  if (request == "list") {
+    console.log("----------------");
+    for (let i = 0; i < todo.length; i++) {
+      console.log(i, todo[i]);
+    }
+    console.log("----------------");
+  } else if (request == "add") {
+    let task = prompt("Please enter the task you wan to add.");
+    todo.push(task);
+    console.log("Task added....!");
+  } else if (request == "delete") {
+    let idx = prompt("Please Enter the task Index");
+    todo.splice(idx, 1);
+    console.log("Task Deleted.....!");
+  } else {
+    console.log("Wrong Request..!");
+  }
+  request = prompt("Please enter your request");
 }
