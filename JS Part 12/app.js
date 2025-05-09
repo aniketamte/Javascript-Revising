@@ -113,6 +113,7 @@
 //Our First Request using fetch
 
 let url = "https://catfact.ninja/fact";
+let url2 = "https://dog.ceo/api/breeds/image/random";
 // fetch(url)
 //   .then((response) => {
 //     return response.json();
@@ -131,8 +132,65 @@ let url = "https://catfact.ninja/fact";
 //     console.log("ERROR - ", err);
 //   });
 
-async function getFacts() {
-  let res = await fetch(url);
-  let data = await res.json();
-  console.log(data);
+//fetch using async await======>
+// async function getFacts() {
+//   let res = await fetch(url);
+//   let data = await res.json();
+//   console.log(data);
+// }
+
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", async () => {
+//   let fact = await getFacts();
+//   console.log(fact);
+//   let p = document.querySelector("#result");
+//   p.innerText = fact;
+// })
+
+// async function getFacts() {
+//   try{
+//     let Res = await axios.get(url);
+//     return Res.data.fact;
+//   } catch(e){
+//     console.log("ERROR - ", e);
+//     return "No fact found.";
+//   }
+//   console.log("bye");
+// }
+
+
+
+
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", async () => {
+//   let link = await getImage();
+//   console.log(link);
+//   let img = document.querySelector("#result");
+//   img.setAttribute("src", link);
+// });
+
+// async function getImage() {
+//   try {
+//     let Res = await axios.get(url2);
+//     return Res.data.message;
+//   } catch (e) {
+//     console.log("ERROR - ", e);
+//     return "No Image found.";
+//   }
+//   console.log("bye");
+// }
+
+
+const URLs = "https://icanhazdadjoke.com/";
+
+async function getJokes() {
+  try{
+    const config = { headers: { Accept : "application/json"}};
+    let res = await axios.get(URLs, config);
+    console.log(res.data);
+  } catch (err){
+    console.log(err);
+  }
 }
