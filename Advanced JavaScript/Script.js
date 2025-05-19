@@ -17,7 +17,6 @@ function abcd() {
   console.log(i); //i already initialize
 }
 abcd();
-
 /*
    ==> Execution context means jab hum function chalayenge function apna  ek khudka ek imaginary container bana lega jisme  uski teen cheeje hogi
 
