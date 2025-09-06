@@ -1,0 +1,13 @@
+.animal-button{
+      margin-right: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+}
+
+#animal-image{
+      margin-top: 20px;
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+}
