@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        margin-bottom: 20px;
+      }
+      .gallery {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+      .thumbnail {
+        width: 100px;
+        height: 70px;
+        border: 2px solid transparent;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+      .thumbnail:hover {
+        border: 2px solid #333;
+        transform: scale(1.05);
+      }
+      .image-display {
+        margin-top: 20px;
+      }
+      .selected-image {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 3px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image showcase</h1>
+
+    <div class="gallery">
+      <img
+        src="andrew-small-EfhCUc_fjrU-unsplash.jpg"
+        class="thumbnail"
+        alt="image1"
+      />
+      <img
+        src="irina-iriser-mNz9Pa3tz34-unsplash.jpg"
+        class="thumbnail"
+        alt="image2"
+      />
+      <img
+        src="quino-al--3KfR1GVKXY-unsplash.jpg"
+        class="thumbnail"
+        alt="image3"
+      />
+      <img
+        src="quino-al-BlMj6RYy3c0-unsplash.jpg"
+        class="thumbnail"
+        alt="image4"
+      />
+    </div>
+
+    <div class="image-display">
+      <img
+        src="andrew-small-EfhCUc_fjrU-unsplash.jpg"
+        class="selected-image"
+        alt="selected-image"
+      />
+    </div>
+    <script>
+      const thumbnails = document.querySelectorAll(".thumbnail");
+      const selectedImage = document.querySelector(".selected-image");
+
+      thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", function () {
+          selectedImage.src = this.src;
+          selectedImage.alt = this.alt;
+        });
+      });
+    </script>
+  </body>
+</html>
