@@ -8,7 +8,7 @@ Here’s a **detailed and simple bullet-point note** based on the JavaScript con
 
   * Introduced in old versions of JavaScript (ES5 and before).
   * **Function Scoped**: It can be accessed anywhere within the function it was defined in.
-  * Adds itself to the **global window object** when used outside a function.
+  * Adds itself to the **global window object** when used outside a function
 
   ```js
   function abcd() {
